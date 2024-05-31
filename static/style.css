@@ -1,0 +1,34 @@
+/*
+card size = 59x86mm
+A4 size = 210x297mm
+margin = 6.35mm (0.25in)
+*/
+
+:root {
+    --card-width: 66.65mm;
+    --card-height: 97.15mm;
+    --vertical-gap: 3mm;
+    --horizontal-gap: 3mm;
+}
+
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, var(--card-width));
+    grid-template-rows: repeat(2, var(--card-height));
+    gap: var(--vertical-gap) var(--horizontal-gap);
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: 100vh;
+}
